@@ -59,11 +59,10 @@
 #define ADCOFFSET       0x51
 #define ADCGAIN2        0x59
 
-
 // for bit clear operations of the SYS_STAT register
 #define STAT_CC_READY           (0x80)
 #define STAT_DEVICE_XREADY      (0x20)
-#define STAT_OVRD_ALERT         (0x10)
+#define STAT_OVRD_ALERT         (0x10)	
 #define STAT_UV                 (0x08)
 #define STAT_OV                 (0x04)
 #define STAT_SCD                (0x02)
@@ -93,7 +92,7 @@ typedef union regSYS_STAT {
     unsigned char WAKE           :1;
     unsigned char CC_READY       :1;
   } bits;
-  signed char regByte;
+  unsigned char regByte;
 } regSYS_STAT_t;
 
 typedef union regSYS_CTRL1 {
